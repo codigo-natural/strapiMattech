@@ -14,7 +14,8 @@
     "@strapi/plugin-users-permissions": "4.7.1",
     "@strapi/strapi": "4.7.1",
     "openai": "^3.2.1",
-    "pg": "8.8.0"
+    "pg": "8.8.0",
+    "strapi-stripe": "^3.2.1"
   },
   "author": {
     "name": "A Strapi developer"
