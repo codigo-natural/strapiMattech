@@ -63,10 +63,17 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "plan": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::plan.plan"
+    "LastName": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "numberTelephone": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
     }
   }
 }

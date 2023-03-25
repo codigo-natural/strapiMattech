@@ -16,6 +16,7 @@
     "gpt-3-encoder": "^1.1.4",
     "openai": "^3.2.1",
     "pg": "8.8.0",
+    "strapi-chatgpt": "^1.0.2",
     "strapi-stripe": "^3.2.1"
   },
   "author": {
