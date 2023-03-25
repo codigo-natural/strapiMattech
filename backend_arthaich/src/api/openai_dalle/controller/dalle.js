@@ -12,12 +12,12 @@ module.exports = {
     try {
         const response = await openai.createImage({
               prompt: prompt,
-              n: 1,
+              n: 3,
               size: "512x512",
             });
         
-            console.log(response.data.data[0].url);
-            ctx.send({ data: response.data.data[0].url });
+            console.log(response.data.data);
+            ctx.send({ data: response.data.data });
 
       } catch (error) {
         if (error.response) {

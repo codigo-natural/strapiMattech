@@ -4840,6 +4840,11 @@
     "p-cancelable" "^2.0.0"
     "responselike" "^2.0.0"
 
+"gpt-3-encoder@^1.1.4":
+  "integrity" "sha512-fSQRePV+HUAhCn7+7HL7lNIXNm6eaFWFbNLOOGtmSJ0qJycyQvj60OvRlH7mee8xAMjBDNRdMXlMwjAbMTDjkg=="
+  "resolved" "https://registry.npmjs.org/gpt-3-encoder/-/gpt-3-encoder-1.1.4.tgz"
+  "version" "1.1.4"
+
 "graceful-fs@^4.1.2", "graceful-fs@^4.1.6", "graceful-fs@^4.2.0", "graceful-fs@^4.2.2", "graceful-fs@^4.2.4", "graceful-fs@^4.2.6", "graceful-fs@^4.2.9":
   "integrity" "sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA=="
   "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.10.tgz"
