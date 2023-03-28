@@ -9,7 +9,7 @@ module.exports = {
    // console.log("entre aqui");
     const { prompt } = ctx.request.body;
 
-    try {
+    try { 
         const response = await openai.createImage({
               prompt: prompt,
               n: 3,
