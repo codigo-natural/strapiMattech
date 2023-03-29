@@ -1,2 +1,2 @@
-start_server: npm run dev
+start_server: npm run start
 # Production config recommended to change npm run start
