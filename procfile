@@ -1,2 +1,2 @@
-start_server: npm run install && npm run build && npm run start
+start_server: npm run start
 # Production config recommended to change npm run start
