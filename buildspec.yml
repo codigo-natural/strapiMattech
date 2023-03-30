@@ -1,4 +1,4 @@
-version: 0.1
+version: 0.2
 
 phases: 
  pre_build:
@@ -12,7 +12,7 @@ build:
 post_build: 
    commands:
     - echo Removing node modules
-    # - rm -rf node_modules/
+    - rm -rf node_modules/
 artifacts:
   files:
   - '**/*'
