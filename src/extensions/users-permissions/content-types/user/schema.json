@@ -74,6 +74,21 @@
     },
     "country": {
       "type": "string"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "customer_id": {
+      "type": "string",
+      "unique": true
     }
   }
 }

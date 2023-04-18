@@ -8,7 +8,7 @@ const openai = new OpenAIApi(configuration);
 
 module.exports = {
   async generateResponse(ctx) {
-   // console.log("entre aqui");
+   console.log("entre aqui");
     const { prompt, users_permissions_user } = ctx.request.body;
 
     try {
@@ -19,18 +19,8 @@ module.exports = {
         max_tokens: 500,
       });
      console.log(response.data.choices);
-    // const encoded = encode(response.data.choices[0].text);
-     //console.log('Encoded this string looks like: ', encoded)
-    // console.log("Tokens are" + encoded.length);
-     // console.log('We can look at each token and what it represents')
-     console.log("payload_in " + JSON.stringify(ctx.request.body))
-     //var payload_out = { data: response.data.choices[0].text.trim() }
-   //  console.log("payload_out " + JSON.stringify(payload_output))
-    
-   // Insert the original and completed text into the Request entity
-
     const data = { "data":{
-      "payload_in": { prompt: prompt},
+      "payload_in": { prompt: prompt },
       "payload_out": { resp: response.data.choices[0].text.trim() },
       "users_permissions_user" : users_permissions_user
     }
