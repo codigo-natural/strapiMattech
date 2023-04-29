@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "contact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "default": "Nombre de pila",
+      "required": true,
+      "regex": "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+$"
+    },
+    "Lastname": {
+      "type": "string",
+      "regex": "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+$",
+      "default": "Castro",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "unique": true,
+      "required": true
+    },
+    "Company": {
+      "type": "string",
+      "regex": "^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+$",
+      "required": false
+    },
+    "Cellphone": {
+      "type": "biginteger",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true,
+      "regex": "^[a-zA-Z\\s\\?]+$"
+    }
+  }
+}
