@@ -4,7 +4,7 @@ module.exports = {
   routes: [
     {
       method: "POST",
-      path: "/emails",
+      path: "/email",
       handler: email.send,
       config: {},
     },
