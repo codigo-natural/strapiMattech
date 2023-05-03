@@ -2,13 +2,19 @@ module.exports = ({ env }) => ({
   // ...
   email: {
     config: {
-      provider: "sendgrid",
+      provider: "nodemailer",
       providerOptions: {
-        apiKey: env("SENDGRID_API_KEY"),
+        host: env("SMTP_HOST"),
+        port: env("SMTP_PORT"),
+        auth: {
+          user: env("SMTP_USER"),
+          pass: env("SMTP_PASS_GMAIL"),
+        },
+        // ... any custom nodemailer options
       },
       settings: {
-        defaultFrom: "myemail@protonmail.com",
-        defaultReplyTo: "myemail@protonmail.com",
+        defaultFrom: env("SMTP_USER"),
+        defaultReplyTo: env("SMTP_USER"),
       },
     },
   },

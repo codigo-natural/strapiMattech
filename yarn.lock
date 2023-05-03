@@ -1665,29 +1665,6 @@
     "colors" "~1.2.1"
     "string-argv" "~0.3.1"
 
-"@sendgrid/client@^7.7.0":
-  "integrity" "sha512-SxH+y8jeAQSnDavrTD0uGDXYIIkFylCo+eDofVmZLQ0f862nnqbC3Vd1ej6b7Le7lboyzQF6F7Fodv02rYspuA=="
-  "resolved" "https://registry.npmjs.org/@sendgrid/client/-/client-7.7.0.tgz"
-  "version" "7.7.0"
-  dependencies:
-    "@sendgrid/helpers" "^7.7.0"
-    "axios" "^0.26.0"
-
-"@sendgrid/helpers@^7.7.0":
-  "integrity" "sha512-3AsAxfN3GDBcXoZ/y1mzAAbKzTtUZ5+ZrHOmWQ279AuaFXUNCh9bPnRpN504bgveTqoW+11IzPg3I0WVgDINpw=="
-  "resolved" "https://registry.npmjs.org/@sendgrid/helpers/-/helpers-7.7.0.tgz"
-  "version" "7.7.0"
-  dependencies:
-    "deepmerge" "^4.2.2"
-
-"@sendgrid/mail@7.7.0":
-  "integrity" "sha512-5+nApPE9wINBvHSUxwOxkkQqM/IAAaBYoP9hw7WwgDNQPxraruVqHizeTitVtKGiqWCKm2mnjh4XGN3fvFLqaw=="
-  "resolved" "https://registry.npmjs.org/@sendgrid/mail/-/mail-7.7.0.tgz"
-  "version" "7.7.0"
-  dependencies:
-    "@sendgrid/client" "^7.7.0"
-    "@sendgrid/helpers" "^7.7.0"
-
 "@sentry/core@6.19.7":
   "integrity" "sha512-tOfZ/umqB2AcHPGbIrsFLcvApdTm9ggpi/kQZFkej7kMphjT+SGBiQfYtjyg9jcRW+ilAR4JXC9BGKsdEQ+8Vw=="
   "resolved" "https://registry.npmjs.org/@sentry/core/-/core-6.19.7.tgz"
@@ -1769,11 +1746,6 @@
   dependencies:
     "escape-string-regexp" "^2.0.0"
     "lodash.deburr" "^4.1.0"
-
-"@socket.io/component-emitter@~3.1.0":
-  "integrity" "sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg=="
-  "resolved" "https://registry.npmjs.org/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz"
-  "version" "3.1.0"
 
 "@strapi/admin@4.7.1":
   "integrity" "sha512-n0kWb28If2koTThVuFrAdqmPyZrWPrALSRE5fWgus+Nhn8LghgQsCzlALWvpXfqWQS4uilvrTLZdJM/q24VSEg=="
@@ -2105,14 +2077,6 @@
   "resolved" "https://registry.npmjs.org/@strapi/provider-audit-logs-local/-/provider-audit-logs-local-4.7.1.tgz"
   "version" "4.7.1"
 
-"@strapi/provider-email-sendgrid@^4.10.1":
-  "integrity" "sha512-lV266p6USSdP56zeFaKlYfo+zbRY9smt4Qg0ElYH02OE2v1jwz8x3KNzBzsXVrx8aiQfarDoK6nub74FYIi6vw=="
-  "resolved" "https://registry.npmjs.org/@strapi/provider-email-sendgrid/-/provider-email-sendgrid-4.10.1.tgz"
-  "version" "4.10.1"
-  dependencies:
-    "@sendgrid/mail" "7.7.0"
-    "@strapi/utils" "4.10.1"
-
 "@strapi/provider-email-sendmail@4.7.1":
   "integrity" "sha512-zbrWHL2nkwlyVWKT9D/aLK3QsqAy9c3d3AmtmLAZz0gYrI2Qv9GuSoKxBn9Kgpw9X9+Kpl/MKWMjJfzqvT6eBw=="
   "resolved" "https://registry.npmjs.org/@strapi/provider-email-sendmail/-/provider-email-sendmail-4.7.1.tgz"
@@ -2201,18 +2165,6 @@
     "prettier" "2.8.4"
     "typescript" "4.6.2"
 
-"@strapi/utils@4.10.1":
-  "integrity" "sha512-+t2dplbcmGpCJccTtVN3XsgDp/9SWSKUmKKDWkrGmddZkEwDH6PU9fN+9KGL09RMJyF3kjwJx6PJfXipyn/Vkg=="
-  "resolved" "https://registry.npmjs.org/@strapi/utils/-/utils-4.10.1.tgz"
-  "version" "4.10.1"
-  dependencies:
-    "@sindresorhus/slugify" "1.1.0"
-    "date-fns" "2.29.3"
-    "http-errors" "1.8.1"
-    "lodash" "4.17.21"
-    "p-map" "4.0.0"
-    "yup" "0.32.9"
-
 "@strapi/utils@4.7.1":
   "integrity" "sha512-qlUG5//Rk1Yr+PYcE9S+Q76qjxFIQBZEkw8psk6E287bO8Fd7AKshF1HXaQJkSD+hncYnPmLt5Uhe/r22xX/PA=="
   "resolved" "https://registry.npmjs.org/@strapi/utils/-/utils-4.7.1.tgz"
@@ -2225,7 +2177,7 @@
     "p-map" "4.0.0"
     "yup" "0.32.9"
 
-"@stripe/stripe-js@^1.52.0":
+"@stripe/stripe-js@1.52.0":
   "integrity" "sha512-Ja2VlaTf3kM5tN4Y0sC8T3ibZAnfGUU/QzMAlk/G+Adz2fF1ycTabtSkdSuVP4/adXox8NkPPV4Xndx/EP4fMg=="
   "resolved" "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-1.52.0.tgz"
   "version" "1.52.0"
@@ -2286,18 +2238,6 @@
   "integrity" "sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ=="
   "resolved" "https://registry.npmjs.org/@types/connect/-/connect-3.4.35.tgz"
   "version" "3.4.35"
-  dependencies:
-    "@types/node" "*"
-
-"@types/cookie@^0.4.1":
-  "integrity" "sha512-XW/Aa8APYr6jSVVA1y/DEIZX0/GMKLEVekNG727R8cs56ahETkRAy/3DR7+fJyh7oUgGwNQaRfXCun0+KbWY7Q=="
-  "resolved" "https://registry.npmjs.org/@types/cookie/-/cookie-0.4.1.tgz"
-  "version" "0.4.1"
-
-"@types/cors@^2.8.12":
-  "integrity" "sha512-RG8AStHlUiV5ysZQKq97copd2UmVYw3/pRMLefISZ3S1hK104Cwm7iLQ3fTKx+lsUH2CE8FlLaYeEA2LSeqYUA=="
-  "resolved" "https://registry.npmjs.org/@types/cors/-/cors-2.8.13.tgz"
-  "version" "2.8.13"
   dependencies:
     "@types/node" "*"
 
@@ -2442,7 +2382,7 @@
   "resolved" "https://registry.npmjs.org/@types/minimatch/-/minimatch-5.1.2.tgz"
   "version" "5.1.2"
 
-"@types/node@*", "@types/node@>= 12", "@types/node@>=10.0.0", "@types/node@>=8.1.0":
+"@types/node@*", "@types/node@>= 12", "@types/node@>=8.1.0":
   "integrity" "sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q=="
   "resolved" "https://registry.npmjs.org/@types/node/-/node-18.15.11.tgz"
   "version" "18.15.11"
@@ -3133,11 +3073,6 @@
   "integrity" "sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA=="
   "resolved" "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz"
   "version" "1.5.1"
-
-"base64id@~2.0.0", "base64id@2.0.0":
-  "integrity" "sha512-lGe34o6EHj9y3Kts9R4ZYs/Gr+6N7MCaMlIFA3F1R2O5/m7K06AxfSeO5530PEERE6/WyEg3lsuyw4GHlPZHog=="
-  "resolved" "https://registry.npmjs.org/base64id/-/base64id-2.0.0.tgz"
-  "version" "2.0.0"
 
 "batch@0.6.1":
   "integrity" "sha512-x+VAiMRL6UPkx+kudNvxTl6hB2XNNCG2r+7wixVfIYwu/2HKRXimwQyaumLjMveWvT2Hkd/cAJw+QBMfJ/EKVw=="
@@ -3927,7 +3862,7 @@
   "resolved" "https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.0.6.tgz"
   "version" "1.0.6"
 
-"cookie@^0.4.1", "cookie@~0.4.1":
+"cookie@^0.4.1":
   "integrity" "sha512-aSWTXFzaKWkvHO1Ny/s+ePFpvKsPnjc551iI41v3ny/ow6tBG5Vd+FuqGNhh1LxOmVzOlGUriIlOaokOvhaStA=="
   "resolved" "https://registry.npmjs.org/cookie/-/cookie-0.4.2.tgz"
   "version" "0.4.2"
@@ -3978,14 +3913,6 @@
   "integrity" "sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ=="
   "resolved" "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.3.tgz"
   "version" "1.0.3"
-
-"cors@~2.8.5":
-  "integrity" "sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g=="
-  "resolved" "https://registry.npmjs.org/cors/-/cors-2.8.5.tgz"
-  "version" "2.8.5"
-  dependencies:
-    "object-assign" "^4"
-    "vary" "^1"
 
 "cosmiconfig@^7.0.0", "cosmiconfig@^7.0.1":
   "integrity" "sha512-AdmX6xUzdNASswsFtmwSt7Vj8po9IuqXm0UXz7QKPuEUmPB4XyjGfaAr2PSuELMwkRMVH1EpIkX5bTZGRB3eCA=="
@@ -4142,7 +4069,7 @@
   dependencies:
     "ms" "^2.1.1"
 
-"debug@^4.1.0", "debug@^4.1.1", "debug@^4.3.2", "debug@^4.3.3", "debug@~4.3.1", "debug@~4.3.2", "debug@4", "debug@4.3.4":
+"debug@^4.1.0", "debug@^4.1.1", "debug@^4.3.2", "debug@^4.3.3", "debug@4", "debug@4.3.4":
   "integrity" "sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ=="
   "resolved" "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
   "version" "4.3.4"
@@ -4533,27 +4460,6 @@
   "version" "1.4.4"
   dependencies:
     "once" "^1.4.0"
-
-"engine.io-parser@~5.0.3":
-  "integrity" "sha512-tjuoZDMAdEhVnSFleYPCtdL2GXwVTGtNjoeJd9IhIG3C1xs9uwxqRNEu5WpnDZCaozwVlK/nuQhpodhXSIMaxw=="
-  "resolved" "https://registry.npmjs.org/engine.io-parser/-/engine.io-parser-5.0.6.tgz"
-  "version" "5.0.6"
-
-"engine.io@~6.4.1":
-  "integrity" "sha512-JFYQurD/nbsA5BSPmbaOSLa3tSVj8L6o4srSwXXY3NqE+gGUNmmPTbhn8tjzcCtSqhFgIeqef81ngny8JM25hw=="
-  "resolved" "https://registry.npmjs.org/engine.io/-/engine.io-6.4.1.tgz"
-  "version" "6.4.1"
-  dependencies:
-    "@types/cookie" "^0.4.1"
-    "@types/cors" "^2.8.12"
-    "@types/node" ">=10.0.0"
-    "accepts" "~1.3.4"
-    "base64id" "2.0.0"
-    "cookie" "~0.4.1"
-    "cors" "~2.8.5"
-    "debug" "~4.3.1"
-    "engine.io-parser" "~5.0.3"
-    "ws" "~8.11.0"
 
 "enhanced-resolve@^5.10.0":
   "integrity" "sha512-QHTXI/sZQmko1cbDoNAa3mJ5qhWUUNAq3vR0/YiD379fWQrcfuoX1+HW2S0MTt7XmoPLapdaDKUtelUSPic7hQ=="
@@ -5431,7 +5337,7 @@
     "p-cancelable" "^2.0.0"
     "responselike" "^2.0.0"
 
-"gpt-3-encoder@^1.1.4":
+"gpt-3-encoder@1.1.4":
   "integrity" "sha512-fSQRePV+HUAhCn7+7HL7lNIXNm6eaFWFbNLOOGtmSJ0qJycyQvj60OvRlH7mee8xAMjBDNRdMXlMwjAbMTDjkg=="
   "resolved" "https://registry.npmjs.org/gpt-3-encoder/-/gpt-3-encoder-1.1.4.tgz"
   "version" "1.1.4"
@@ -7532,6 +7438,11 @@
   dependencies:
     "nodemailer-fetch" "1.6.0"
 
+"nodemailer@6.6.1":
+  "integrity" "sha512-1xzFN3gqv+/qJ6YRyxBxfTYstLNt0FCtZaFRvf4Sg9wxNGWbwFmGXVpfSi6ThGK6aRxAo+KjHtYSW8NvCsNSAg=="
+  "resolved" "https://registry.npmjs.org/nodemailer/-/nodemailer-6.6.1.tgz"
+  "version" "6.6.1"
+
 "normalize-path@^3.0.0", "normalize-path@~3.0.0":
   "integrity" "sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA=="
   "resolved" "https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz"
@@ -7568,7 +7479,7 @@
   "resolved" "https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.9.0.tgz"
   "version" "0.9.0"
 
-"object-assign@^4", "object-assign@^4.0.1", "object-assign@^4.1.0", "object-assign@^4.1.1", "object-assign@4.x":
+"object-assign@^4.0.1", "object-assign@^4.1.0", "object-assign@^4.1.1", "object-assign@4.x":
   "integrity" "sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg=="
   "resolved" "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
   "version" "4.1.1"
@@ -7724,7 +7635,7 @@
     "is-docker" "^2.1.1"
     "is-wsl" "^2.2.0"
 
-"openai@^3.2.1":
+"openai@3.2.1":
   "integrity" "sha512-762C9BNlJPbjjlWZi4WYK9iM2tAVAv0uUp1UmI34vb0CN5T2mjB/qM6RYBmNKMh/dN9fC+bxqPwWJZUTWW052A=="
   "resolved" "https://registry.npmjs.org/openai/-/openai-3.2.1.tgz"
   "version" "3.2.1"
@@ -9599,33 +9510,6 @@
     "source-map-resolve" "^0.5.0"
     "use" "^3.1.0"
 
-"socket.io-adapter@~2.5.2":
-  "integrity" "sha512-87C3LO/NOMc+eMcpcxUBebGjkpMDkNBS9tf7KJqcDsmL936EChtVva71Dw2q4tQcuVC+hAUy4an2NO/sYXmwRA=="
-  "resolved" "https://registry.npmjs.org/socket.io-adapter/-/socket.io-adapter-2.5.2.tgz"
-  "version" "2.5.2"
-  dependencies:
-    "ws" "~8.11.0"
-
-"socket.io-parser@~4.2.1":
-  "integrity" "sha512-DJtziuKypFkMMHCm2uIshOYC7QaylbtzQwiMYDuCKy3OPkjLzu4B2vAhTlqipRHHzrI0NJeBAizTK7X+6m1jVw=="
-  "resolved" "https://registry.npmjs.org/socket.io-parser/-/socket.io-parser-4.2.2.tgz"
-  "version" "4.2.2"
-  dependencies:
-    "@socket.io/component-emitter" "~3.1.0"
-    "debug" "~4.3.1"
-
-"socket.io@4.6.1":
-  "integrity" "sha512-KMcaAi4l/8+xEjkRICl6ak8ySoxsYG+gG6/XfRCPJPQ/haCRIJBTL4wIl8YCsmtaBovcAXGLOShyVWQ/FG8GZA=="
-  "resolved" "https://registry.npmjs.org/socket.io/-/socket.io-4.6.1.tgz"
-  "version" "4.6.1"
-  dependencies:
-    "accepts" "~1.3.4"
-    "base64id" "~2.0.0"
-    "debug" "~4.3.2"
-    "engine.io" "~6.4.1"
-    "socket.io-adapter" "~2.5.2"
-    "socket.io-parser" "~4.2.1"
-
 "sockjs@^0.3.24":
   "integrity" "sha512-GJgLTZ7vYb/JtPSSZ10hsOYIvEYsjbNU+zPdIHcUaWVNUEPivzxku31865sSSud0Da0W4lEeOPlmw93zLQchuQ=="
   "resolved" "https://registry.npmjs.org/sockjs/-/sockjs-0.3.24.tgz"
@@ -9831,7 +9715,7 @@
     "styled-components" "^5.2.3"
     "whatwg-fetch" "^3.6.2"
 
-"strapi-plugin-content-manager@^3.6.11":
+"strapi-plugin-content-manager@3.6.11":
   "integrity" "sha512-tMukiH9g4t6zAi+gpx/braqbmLtrYQrav110Re15xlPg3jwGvD4Kkw/rHeFWkC1E5mX/QeoAm6TLUGhQ0zaHaQ=="
   "resolved" "https://registry.npmjs.org/strapi-plugin-content-manager/-/strapi-plugin-content-manager-3.6.11.tgz"
   "version" "3.6.11"
@@ -9876,7 +9760,15 @@
     "strapi-utils" "3.6.11"
     "yup" "^0.32.9"
 
-"strapi-stripe@^3.2.1":
+"strapi-provider-email-nodemailer@^3.6.11":
+  "integrity" "sha512-y6LZXnGai9axH2c//wFFsEsWsrdFlkxg8ujzqpQ9X4uwvqrXCwdZhDO3+cTzIs+NsWRhUjr5D1WE81IZ+EGtOQ=="
+  "resolved" "https://registry.npmjs.org/strapi-provider-email-nodemailer/-/strapi-provider-email-nodemailer-3.6.11.tgz"
+  "version" "3.6.11"
+  dependencies:
+    "lodash" "4.17.21"
+    "nodemailer" "6.6.1"
+
+"strapi-stripe@3.2.1":
   "integrity" "sha512-U1tZQUH3gEhNakDG2bsmqnucY5l/sp6AXcfGHLxoSY137ylzaB3cZcVLu2czuTqKarJKdKVBR2NWfzcZj7aQfA=="
   "resolved" "https://registry.npmjs.org/strapi-stripe/-/strapi-stripe-3.2.1.tgz"
   "version" "3.2.1"
@@ -10597,7 +10489,7 @@
   "resolved" "https://registry.npmjs.org/value-equal/-/value-equal-1.0.1.tgz"
   "version" "1.0.1"
 
-"vary@^1", "vary@^1.1.2", "vary@~1.1.2":
+"vary@^1.1.2", "vary@~1.1.2":
   "integrity" "sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg=="
   "resolved" "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   "version" "1.1.2"
@@ -10909,7 +10801,7 @@
   "resolved" "https://registry.npmjs.org/ws/-/ws-8.13.0.tgz"
   "version" "8.13.0"
 
-"ws@~8.11.0", "ws@8.11.0":
+"ws@8.11.0":
   "integrity" "sha512-HPG3wQd9sNQoT9xHyNCXoDUa+Xw/VevmY9FoHyQ+g+rrMn4j6FB4np7Z0OhdTgjx6MgQLK7jwSy1YecU1+4Asg=="
   "resolved" "https://registry.npmjs.org/ws/-/ws-8.11.0.tgz"
   "version" "8.11.0"
