@@ -23,14 +23,14 @@
     "email": {
       "type": "email",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "company": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "telephone": {
-      "required": false,
+      "required": true,
       "type": "biginteger"
     },
     "message": {
