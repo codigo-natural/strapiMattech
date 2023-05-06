@@ -23,7 +23,7 @@ module.exports = {
         to: sendTo,
         subject: `Asunto: message from ${body.company}`,
         text: "Este es el contenido del correo",
-        html: `<h1>Welcome!</h1><p>${body.description}</p>`,
+        html: `<h1>Welcome!</h1><p>${body.message} name: ${body.name} lastname: ${body.lastName}</p>`,
       });
 
       ctx.send({ message: "Email sent" });
