@@ -4,6 +4,7 @@ const nodemailer = require("nodemailer");
 
 const passGmail = process.env.SMTP_PASS_GMAIL;
 const userGmail = process.env.SMTP_USER;
+const emailService = process.env.EMAIL_SERVICE;
 
 module.exports = {
   send: async (ctx) => {
@@ -11,7 +12,7 @@ module.exports = {
     const sendTo = body.email;
     try {
       let transporter = nodemailer.createTransport({
-        service: "gmail",
+        service: emailService,
         auth: {
           user: userGmail,
           pass: passGmail,
@@ -19,7 +20,7 @@ module.exports = {
       });
 
       let info = await transporter.sendMail({
-        from: "castro.t.alex@gmail.com",
+        from: userGmail,
         to: sendTo,
         subject: `Asunto: message from ${body.company}`,
         text: "Este es el contenido del correo",
