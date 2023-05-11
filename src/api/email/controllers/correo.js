@@ -2,8 +2,10 @@
 "use strict";
 const nodemailer = require("nodemailer");
 
-const passGmail = process.env.SMTP_PASS_GMAIL;
-const userGmail = process.env.SMTP_USER;
+const smtpHost = process.env.SMTP_HOST;
+const smtpPort = process.env.SMTP_PORT;
+const smtpUser = process.env.SMTP_USER;
+const smtpPass = process.env.SMTP_PASS;
 
 module.exports = {
   send: async (ctx) => {
@@ -11,15 +13,17 @@ module.exports = {
     const sendTo = body.email;
     try {
       let transporter = nodemailer.createTransport({
-        service: "gmail",
+        host: smtpHost,
+        port: smtpPort,
+        secure: true, // Enable SSL/TLS
         auth: {
-          user: userGmail,
-          pass: passGmail,
+          user: smtpUser,
+          pass: smtpPass,
         },
       });
 
       let info = await transporter.sendMail({
-        from: "castro.t.alex@gmail.com",
+        from: smtpUser,
         to: sendTo,
         subject: `Asunto: message from ${body.company}`,
         text: "Este es el contenido del correo",
@@ -34,27 +38,3 @@ module.exports = {
     }
   },
 };
-
-/**
- * Read the documentation () to implement custom controller functions
- */
-
-// send: async (ctx) => {
-//   const body = ctx.request.body;
-//   const sendTo = body.email;
-//   strapi.log.debug(`Trying to send an email to ${sendTo}`);
-
-//   try {
-//     const emailOptions = {
-//       to: sendTo,
-//       subject: "This is a test",
-//       html: `<h1>Welcome!</h1><p>This is a test HTML email.</p>`,
-//     };
-//     await strapi.plugins["email"].services.email.send(emailOptions);
-//     strapi.log.debug(`Email sent to ${sendTo}`);
-//     ctx.send({ message: "Email sent" });
-//   } catch (err) {
-//     strapi.log.error(`Error sending email to ${sendTo}`, err);
-//     ctx.send({ error: "Error sending email" });
-//   }
-// },
