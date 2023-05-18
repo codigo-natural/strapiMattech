@@ -22,6 +22,15 @@
     },
     "payload_out": {
       "type": "json"
+    },
+    "Source": {
+      "type": "enumeration",
+      "enum": [
+        "MatDalle",
+        "MatChat",
+        "MatTranslation",
+        "MatSport"
+      ]
     }
   }
 }
