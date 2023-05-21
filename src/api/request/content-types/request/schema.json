@@ -23,13 +23,21 @@
     "payload_out": {
       "type": "json"
     },
-    "source": {
+    "Source": {
       "type": "enumeration",
       "enum": [
-        "Matchat",
         "MatDalle",
+        "MatChat",
         "MatTranslation",
         "MatSport"
+      ]
+    },
+    "dalle_images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
       ]
     }
   }
