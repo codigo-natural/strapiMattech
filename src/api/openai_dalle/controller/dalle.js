@@ -14,9 +14,10 @@ module.exports = {
         prompt: prompt,
         n: 2,
         size: "512x512",
+        response_format: "b64_json",
       });
 
-      console.log(response.data.data);
+      // console.log("format 64", response.data.data);
       const data = {
         data: {
           payload_in: { prompt: prompt },

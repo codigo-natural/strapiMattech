@@ -18,26 +18,4 @@ module.exports = {
    * run jobs, or perform some special logic.
    */
   bootstrap(/*{ strapi }*/) {},
-  //   let { Server } = require("socket.io");
-  //   // set up socket io
-  //   let io = new Server(strapi.server.httpServer, {
-  //     cors: {
-  //       origin: "http://localhost:3000",
-  //       methods: ["GET", "POST"],
-  //       allowedHeaders: ["my-custom-header"],
-  //       credentials: true,
-  //     },
-  //   });
-  //   io.on("connection", (socket) => {
-  //     console.log("a user connected");
-  //     socket.on("chat message", (msg) => {
-  //       console.log("message: " + msg);
-  //       io.emit("chat message", msg);
-  //     });
-
-  //     socket.on("disconnect", () => {
-  //       console.log("user disconnected");
-  //     });
-  //   });
-  // },
 };
