@@ -22,7 +22,9 @@ module.exports = {
     const data = { "data":{
       "payload_in": { prompt: prompt },
       "payload_out": { resp: response.data.choices[0].text.trim() },
-      "users_permissions_user" : users_permissions_user
+      "users_permissions_user" : users_permissions_user,
+     
+      
     }
     }
     const request = await strapi.db.query('api::request.request').create(data);
