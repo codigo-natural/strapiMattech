@@ -8,6 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
+    
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.7.1",
