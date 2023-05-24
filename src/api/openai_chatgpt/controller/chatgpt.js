@@ -33,7 +33,7 @@ module.exports = {
 
       ctx.send({ data: response.data.choices[0].text.trim() });
     } catch (err) {
-      ctx.badRequest("Could not generate response" + err);
+      ctx.badRequest("Could not generate response :" + err);
     }
   },
 };
