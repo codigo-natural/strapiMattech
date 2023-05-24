@@ -16,4 +16,4 @@ post_build:
 artifacts:
   files:
   - '**/*'
-  base-directory: '.'
+ 
