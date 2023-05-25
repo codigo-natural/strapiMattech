@@ -25,10 +25,10 @@ module.exports = {
       let info = await transporter.sendMail({
         from: smtpUser,
         to: sendTo,
-        subject: `Asunto: message from ${body.company}`,
-        text: "Este es el contenido del correo",
-        html: `<h1>Welcome!</h1><p>${body.message} name: ${body.name} lastname: ${body.lastName}</p>`,
-      });
+         subject: "Re: Merci pour votre demande chez MATTECH",
+         text: `Cher(e) ${body.name},\n\nNous vous remercions d'avoir pris le temps de remplir notre formulaire de contact. Votre demande a bien été reçue et est en cours de traitement par notre équipe.\n\nNous mettons un point d'honneur à répondre à toutes les demandes dans les plus brefs délais. Cependant, veuillez noter que notre temps de réponse peut varier en fonction du volume de demandes que nous recevons. Notre objectif est de vous répondre dans les 24-48 heures.\n\nNous apprécions votre patience et votre compréhension, et nous nous réjouissons à l'idée de vous aider avec votre demande.\n\nCordialement,\n\nHUBERT Matthieu\nPARIS\nMATTECH\n\nEmail: Matthieu.hubert@mattech-ia.com`,
+         html: `<h1>Re: Merci pour votre demande chez MATTECH</h1><p>Cher(e) ${body.name},</p><p>Nous vous remercions d'avoir pris le temps de remplir notre formulaire de contact. Votre demande a bien été reçue et est en cours de traitement par notre équipe.</p><p>Nous mettons un point d'honneur à répondre à toutes les demandes dans les plus brefs délais. Cependant, veuillez noter que notre temps de réponse peut varier en fonction du volume de demandes que nous recevons. Notre objectif est de vous répondre dans les 24-48 heures.</p><p>Nous apprécions votre patience et votre compréhension, et nous nous réjouissons à l'idée de vous aider avec votre demande.</p><p>Cordialement,</p><p>HUBERT Matthieu<br>PARIS<br>MATTECH</p><p>Email: <a href="mailto:Matthieu.hubert@mattech-ia.com">Matthieu.hubert@mattech-ia.com</a></p>`,
+              });
 
       ctx.send({ message: "Email sent" });
       console.log("Correo enviado: %s", info);
