@@ -12,8 +12,8 @@ module.exports = {
     const {
       prompt,
       fromLanguage,
-      language1,
-      language2,
+      toLanguage,
+      toThirdLanguage,
       users_permissions_user,
     } = ctx.request.body;
 
@@ -42,7 +42,7 @@ module.exports = {
         1. QuickCart로 스트레스 없는 쇼핑의 즐거움을 발견하세요. 현명한 쇼핑 방법입니다.
         2. クイックカートでストレスフリーのショッピングの喜びを見つけてください。賢い買い物の方法です。
         --
-        input: "Translate from {${fromLanguage}}: '${prompt}' into 1. ${language1}, 2. ${language2}."
+        input: "Translate from {${fromLanguage}}: '${prompt}' into 1. ${toLanguage}, 2. ${toThirdLanguage}."
         Correct output:`,
         temperature: 0.8,
         max_tokens: 500,
