@@ -215,25 +215,25 @@
     "transport": {
       "type": "enumeration",
       "enum": [
-        "- Avion - Permis de pilote",
-        "- Bateau - Permis bateau",
-        "- Bus - Permis D",
-        "- Camion - Permis C",
-        "- Char à voile",
-        "- Cyclomoteur - BSR ou Permis AM",
-        "- Engins de chantier - CACES",
-        "- Ferry",
-        "- Hélicoptère - Licence de pilote d'hélicoptère",
-        "- Moto - Permis A",
-        "- Métro",
-        "- Parapente - Brevet de pilote de parapente",
-        "- Permis B ou Permis A1",
-        "- RER",
-        "- Scooter - BSR ou Permis AM",
-        "- Tracteur - Permis de conduire de la catégorie appropriée selon le poids"
+        "Avion - Permis de pilote",
+        "Bateau - Permis bateau",
+        "Bus - Permis D",
+        "Camion - Permis C",
+        "Char à voile",
+        "Cyclomoteur - BSR ou Permis AM",
+        "Engins de chantier - CACES",
+        "Ferry",
+        "Hélicoptère - Licence de pilote d'hélicoptère",
+        "Moto - Permis A",
+        "Métro",
+        "Parapente - Brevet de pilote de parapente",
+        "Permis B ou Permis A1",
+        "RER",
+        "Scooter - BSR ou Permis AM",
+        "Tracteur - Permis de conduire de la catégorie appropriée selon le poids"
       ]
     },
-    "Nacionality": {
+    "nacionality": {
       "type": "enumeration",
       "enum": [
         "Afghan",
