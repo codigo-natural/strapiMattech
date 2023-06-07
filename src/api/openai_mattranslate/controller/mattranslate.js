@@ -54,7 +54,12 @@ module.exports = {
 
       const data = {
         data: {
-          payload_in: { prompt: prompt },
+          payload_in: {
+            prompt: prompt,
+            fromLanguage: fromLanguage,
+            toLanguage: toLanguage,
+            toThirdLanguage: toThirdLanguage,
+          },
           payload_out: { lang1: lang1.trim(), lang2: lang2.trim() },
           users_permissions_user: users_permissions_user,
           Source: "MatTranslation",

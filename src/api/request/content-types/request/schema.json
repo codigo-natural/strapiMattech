@@ -31,14 +31,6 @@
         "MatTranslation",
         "MatSport"
       ]
-    },
-    "dalle_images": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
     }
   }
 }
