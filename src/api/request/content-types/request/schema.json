@@ -29,7 +29,8 @@
         "MatDalle",
         "MatChat",
         "MatTranslation",
-        "MatSport"
+        "MatSport",
+        "MatQuiz"
       ]
     }
   }
