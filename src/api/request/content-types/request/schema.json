@@ -30,6 +30,7 @@
         "MatChat",
         "MatTranslation",
         "MatSport",
+        "MatDescription",
         "MatQuiz"
       ]
     }
