@@ -27,14 +27,14 @@ module.exports = {
         Correct output: "FB:Elevate your farming journey with XfarmV's AgroAdvance. 🚀Experience cutting-edge solutions tailored for the modern farmer🚜, delivering exceptional results and driving agricultural success🌱. #AgroAdvance #FarmingInnovation".
         --
         Training input: "Give me a copywriting idea for ["twitter"] advertising in {auto}. {TechCo} is a {technology-focused} company that sells {Software and Applications}".
-        Correct output: "TW:Experience the Future of Technology with {TechCo}'s Advanced Software Solutions💻. Discover a world of possibilities with our diverse range of software applications tailored to meet your needs. 🔒From secure solutions to intuitive interfaces, {TechCo} empowers you to transform the way you work and play.🔥 #TechCo #AdvancedSolutions #Innovation".
+        Correct output: "TW:Experience the Future of Technology with {TechCo}'s Advanced Software Solutions💻. Discover a world of possibilities with our diverse range of software applications tailored to meet your needs. 🔒From secure solutions to intuitive interfaces, {TechCo} empowers you to transform the way you work and play. 🔥#TechCo #AdvancedSolutions #Innovation".
         --
         Training input: "Give me a copywriting idea for ["instagram", "twitter"] advertising in {english}. {ColSanitas} is a {healthcare-focused} company that take care of {health}".
-        Correct output: "IG: 💪Embrace a healthier you with ColSanitas' HealthPlus. From preventive care to specialized treatments, our comprehensive healthcare solutions cater to individuals of all ages. Join our thriving community and prioritize your well-being like never before.",
+        Correct output: "IG:💪Embrace a healthier you with ColSanitas' HealthPlus. From preventive care to specialized treatments, our comprehensive healthcare solutions cater to individuals of all ages. Join our thriving community and prioritize your well-being like never before.",
         "TW: Your health matters❤️‍🩹, and at ColSanitas, we make it our mission to provide exceptional care💊. Trust our healthcare-focused company to prioritize your well-being and support you every step of the way. 🌈 #ColSanitas #Healthcare"
         --
         Training input: "Give me a copywriting idea for ["telegram"] advertising in {spanish}. {Walmart} is a {retail-focused} company that sells {everything}".
-        Correct output: "TG:¡📢 Descubre en Walmart! Únete a nuestro canal de Telegram para las mejores ofertas, promociones y novedades. 🎉 Compra desde casa y encuentra todo lo que necesitas en un solo lugar. ¡No te pierdas nuestras exclusivas ofertas en productos de calidad a precios increíbles! Únete hoy y disfruta de una experiencia única con Walmart. ¡Te esperamos! 😉".
+        Correct output: "TG:¡📢Descubre en Walmart! Únete a nuestro canal de Telegram para las mejores ofertas, promociones y novedades. 🎉 Compra desde casa y encuentra todo lo que necesitas en un solo lugar. ¡No te pierdas nuestras exclusivas ofertas en productos de calidad a precios increíbles! Únete hoy y disfruta de una experiencia única con Walmart. ¡Te esperamos!😉".
         --
         Training input: "Give me a copywriting idea for ["whatsApp"] advertising in {english}. {Walmart} is a {retail-focused} company that sells {everything}".
         Correct output: "WA:🛒✨Upgrade your shopping experience with Walmart's QuickMart. Say goodbye to long queues and endless browsing. With QuickMart, shopping is just a message away.📲 Get personalized recommendations, exclusive deals, and fast deliveries. Join our community of savvy shoppers and enjoy hassle-free convenience".
@@ -45,9 +45,6 @@ module.exports = {
         temperature: 0.8,
         max_tokens: 1000,
       });
-
-      // const copywritings = response.data.choices[0].text.trim().split("\n\n");
-      // console.log("copywritings", copywritings);
 
       const data = {
         data: {
