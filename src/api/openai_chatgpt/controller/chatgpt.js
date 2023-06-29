@@ -12,26 +12,28 @@ module.exports = {
     const { prompt, users_permissions_user } = ctx.request.body;
 
     try {
-      const response = await openai.createCompletion({
-        model: "text-davinci-003",
-        prompt: prompt,
+      const response = await openai.createChatCompletion({
+        model: "gpt-3.5-turbo",
+        //prompt: prompt,
+        messages: [{"role": "user", "content": prompt}],
         temperature: 0,
         max_tokens: 500,
       });
-      console.log(response.data.choices);
+      
+      //console.log(response.data.choices[0].message.content);
       const data = {
         data: {
           payload_in: { prompt: prompt },
-          payload_out: { resp: response.data.choices[0].text.trim() },
+          payload_out: { resp: response.data.choices[0].message.content  },
           users_permissions_user: users_permissions_user,
           Source: "MatChat",
         },
       };
-      const request = await strapi.db
+    await strapi.db
         .query("api::request.request")
         .create(data);
 
-      ctx.send({ data: response.data.choices[0].text.trim() });
+      ctx.send({ data: response.data.choices[0].message.content });
     } catch (err) {
       ctx.badRequest("Could not generate response :" + err);
     }
