@@ -92,7 +92,7 @@ module.exports = {
     Correct output:
     `,
         temperature: 0.8,
-        max_tokens: 1000,
+        max_tokens: 1500,
       });
 
       const data = {
@@ -117,8 +117,8 @@ module.exports = {
 
       ctx.send({ data: JSON.parse(response.data.choices[0].text.trim()) });
     } catch (error) {
-      console.error("Error al generar el plan de entrenamiento", error);
-      ctx.badRequest({ error: "Error al generar el plan de entrenamiento" });
+      console.error("Error try to generate the quiz questions", error);
+      ctx.badRequest({ error: "Error try to generate the quiz questions" });
     }
   },
 };
