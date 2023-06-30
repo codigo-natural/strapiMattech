@@ -16,20 +16,19 @@ module.exports = {
         model: "gpt-3.5-turbo",
         //prompt: prompt,
         messages: [{"role": "user", "content": prompt}],
-        temperature: 0,
+        temperature: 0.7,
         max_tokens: 500,
       });
-      
-      //console.log(response.data.choices[0].message.content);
+     // console.log(response.data.choices[0].message.content);
       const data = {
         data: {
           payload_in: { prompt: prompt },
-          payload_out: { resp: response.data.choices[0].message.content  },
+          payload_out: { resp: response.data.choices[0].message.content},
           users_permissions_user: users_permissions_user,
           Source: "MatChat",
         },
       };
-    await strapi.db
+      const request = await strapi.db
         .query("api::request.request")
         .create(data);
 
