@@ -17,7 +17,7 @@ module.exports = {
       const resquest = await strapi.db
         .query("api::request.request")
         .create(data);
-      console.log("resquest", resquest);
+      console.log("resquest", resquest.id);
       ctx.send({ reqId: resquest.id });
 
       // ctx.send(payload);

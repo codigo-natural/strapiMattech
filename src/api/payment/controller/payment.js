@@ -1,9 +1,10 @@
 const stripe = require("stripe")("sk_test_51MmF5HEZbX6Zpxv9cu17vK5ZbcYrLIWRB9F1beqlT5vYTzIxjJSN5vsTugGzAX4YOxYvfb2qluByAeAf1MTsWPoS00nvBF8VEJ");
-const YOUR_DOMAIN = 'http://localhost:1337';
+
 module.exports = {
   createPaymentIntent: async (ctx) => {
     const { amount, currency } = ctx.request.body;
     
+    console.log("Amount is "+ amount);
     
     const paymentIntent = await stripe.paymentIntents.create({
       amount,
@@ -26,9 +27,9 @@ module.exports = {
     ctx.send(paymentIntent);
   },
 
-  async createSubscription(ctx) {
+  createSubscription: async(ctx) => {
     const { customerId, paymentMethodId, priceId } = ctx.request.body;
-
+    console.log("Ente aqui " + customerId)
     // Create/update customer in Stripe
     const customer = await stripe.customers.update(customerId, {
       payment_method: paymentMethodId,
