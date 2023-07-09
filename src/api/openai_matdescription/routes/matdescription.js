@@ -4,7 +4,7 @@ module.exports = {
     {
       method: "POST",
       path: "/openai/matdescription",
-      handler: openai.generateResponse,
+      handler: openai.generateDescription,
       config: {
         policies: [],
         auth: false,
