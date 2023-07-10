@@ -8,15 +8,18 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
-    
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.7.1",
     "@strapi/plugin-users-permissions": "4.7.1",
     "@strapi/strapi": "4.7.1",
     "@stripe/stripe-js": "1.52.0",
+    "ai": "^2.1.14",
+    "eventsource-parser": "^1.0.0",
     "gpt-3-encoder": "1.1.4",
+    "langchain": "^0.0.104",
     "openai": "3.2.1",
+    "openai-edge": "^1.1.1",
     "pg": "8.8.0",
     "strapi-plugin-content-manager": "3.6.11",
     "strapi-provider-email-nodemailer": "^3.6.11",
