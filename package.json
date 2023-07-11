@@ -8,7 +8,6 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
-    
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.7.1",
@@ -18,6 +17,7 @@
     "gpt-3-encoder": "1.1.4",
     "openai": "3.2.1",
     "pg": "8.8.0",
+    "sharp": "^0.32.1",
     "strapi-plugin-content-manager": "3.6.11",
     "strapi-provider-email-nodemailer": "^3.6.11",
     "strapi-stripe": "3.2.1"
