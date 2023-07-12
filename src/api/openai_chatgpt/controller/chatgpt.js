@@ -1,40 +1,30 @@
-const { Configuration, OpenAIApi } = require("openai");
-//const {encode, decode} = require('gpt-3-encoder')
-
-const configuration = new Configuration({
-  apiKey: process.env.OPEN_AI_TOKEN,
-});
-const openai = new OpenAIApi(configuration);
-
 module.exports = {
   async generateResponse(ctx) {
-    console.log("entre aqui");
-    const { prompt, users_permissions_user } = ctx.request.body;
+    // Extract the `messages` from the body of the request
+    const { prompt, aiResponse, users_permissions_user } = await ctx.request
+      .body;
+    console.log("backend messages here", aiResponse);
 
     try {
-      const response = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        //prompt: prompt,
-        messages: [{"role": "user", "content": prompt}],
-        temperature: 0.7,
-        max_tokens: 500,
-      });
-     // console.log(response.data.choices[0].message.content);
       const data = {
         data: {
           payload_in: { prompt: prompt },
-          payload_out: { resp: response.data.choices[0].message.content},
+          payload_out: { resp: aiResponse },
           users_permissions_user: users_permissions_user,
           Source: "MatChat",
         },
       };
-      const request = await strapi.db
+      const resquest = await strapi.db
         .query("api::request.request")
         .create(data);
+      console.log("resquest", resquest.id);
+      ctx.send({ reqId: resquest.id });
 
-      ctx.send({ data: response.data.choices[0].message.content });
-    } catch (err) {
-      ctx.badRequest("Could not generate response :" + err);
+      // ctx.send(payload);
+
+      // return new StreamingTextResponse(stream);
+    } catch (error) {
+      ctx.badRequest("Could not generate response :" + error);
     }
   },
 };
