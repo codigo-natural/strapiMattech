@@ -12,6 +12,8 @@
   "dependencies": {
     "@strapi/plugin-i18n": "4.7.1",
     "@strapi/plugin-users-permissions": "4.7.1",
+    "@strapi/provider-email-nodemailer": "^4.11.5",
+    "@strapi/provider-email-sendmail": "^4.11.7",
     "@strapi/strapi": "4.7.1",
     "@stripe/stripe-js": "1.52.0",
     "ai": "^2.1.14",
