@@ -13,13 +13,14 @@ module.exports = {
       // Set other PaymentIntent options, e.g., description, etc.
     });
     
-    
+    console.log("Payment Intent Object" + JSON.stringify(paymentIntent))
     // Return the PaymentIntent client secret to the client
     ctx.send({ client_secret: paymentIntent.client_secret, transactionId: paymentIntent.id });
   },
 
   retrievePaymentIntent: async (ctx) => {
     console.log("entre aqui");
+    
     const { paymentIntentId } = ctx.params;
     console.log("this is "+ paymentIntentId);
     const paymentIntent = await stripe.paymentIntents.retrieve(paymentIntentId);
@@ -29,7 +30,7 @@ module.exports = {
 
   createSubscription: async(ctx) => {
     const { customerId, paymentMethodId, priceId } = ctx.request.body;
-    console.log("Ente aqui " + customerId)
+    console.log("Ente aqui " + customerId + " Payment method" + paymentMethodId)
     // Create/update customer in Stripe
     const customer = await stripe.customers.update(customerId, {
       payment_method: paymentMethodId,

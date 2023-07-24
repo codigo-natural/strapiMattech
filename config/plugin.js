@@ -8,7 +8,7 @@ module.exports = ({ env }) => ({
         port: env("SMTP_PORT"),
         auth: {
           user: env("SMTP_USER"),
-          pass: env("SMTP_PASS_GMAIL"),
+          pass: env("SMTP_PASS"),
         },
         // ... any custom nodemailer options
       },
@@ -20,3 +20,4 @@ module.exports = ({ env }) => ({
   },
   // ...
 });
+
