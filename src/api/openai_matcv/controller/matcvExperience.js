@@ -31,9 +31,17 @@ module.exports = {
        Directed digital marketing campaigns to increase brand visibility and generate qualified leads.
        Analyzed and optimized the performance of digital marketing campaigns by tracking metrics and analyzing data.
        --
+       input: role: {Psicólogo Organizacional}, market: {laboral}, keywords: {Recursos Humanos,Consultoría,Desarrollo Organizacional,Coaching Ejecutivo} in {auto}
+       correct ouput:Elaboración y ejecución de programas de desarrollo organizacional para mejorar la eficiencia y productividad de la empresa.
+       Asesoramiento en la gestión de recursos humanos para optimizar la selección, retención y desarrollo del talento.
+       Realización de evaluaciones psicológicas y análisis de competencias para identificar áreas de mejora y potenciar el rendimiento del personal.
+       Implementación de programas de coaching ejecutivo para fortalecer habilidades de liderazgo y mejorar el desempeño de los directivos.
+       Brindar consultoría en temas de clima laboral, comunicación organizacional y resolución de conflictos para fomentar un ambiente de trabajo saludable y productivo.
+       --
         input: role: ${role}, market: ${market}, keywords: ${keywords} in ${language}
         Correct ouput:`,
-        temperature: 1.0,
+        temperature: 0.7,
+        presence_penalty: 0.5,
         max_tokens: 1000,
       });
 

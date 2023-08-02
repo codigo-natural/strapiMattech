@@ -28,9 +28,14 @@ module.exports = {
        Correct ouput:Experienced web developer specializing in the tech sector, proficient in Next.js, React, Tailwind, Node.js, and Express. 
        Skilled in creating dynamic and responsive websites, optimizing user experiences, and delivering high-quality solutions.
        --
+       input: role: {lider de equipo}, market: {Mercadeo}, keywords: {seo, sem, redes sociales, negocios digitales, marcas} in {auto}
+        Correct ouput:Líder de equipo con amplia experiencia en el sector de marketing. Experto en SEO, SEM y redes sociales, capaz de impulsar negocios digitales y potenciar marcas. 
+        Habilidades destacadas en la gestión de equipos y en la implementación de estrategias de marketing online.
+       --
         input: role: ${role}, market: ${market}, keywords: ${keywords} in ${language}
         Correct ouput:`,
-        temperature: 1.0,
+        temperature: 0.7,
+        presence_penalty: 0.5,
         max_tokens: 1000,
       });
 
