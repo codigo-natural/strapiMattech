@@ -19,6 +19,7 @@
     "ai": "^2.1.14",
     "eventsource-parser": "^1.0.0",
     "gpt-3-encoder": "1.1.4",
+    "nodemailer-ntlm-auth": "^1.0.4",
     "openai": "3.2.1",
     "openai-edge": "^1.1.1",
     "pg": "8.8.0",

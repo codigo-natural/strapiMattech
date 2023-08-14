@@ -1,4 +1,5 @@
 // config/plugin.js
+const nodemailerNTLMAuth = require("nodemailer-ntlm-auth");
 module.exports = ({ env }) => ({
   email: {
     config: {
@@ -9,10 +10,14 @@ module.exports = ({ env }) => ({
             host: env("SMTP_HOST"),
             port: env("SMTP_PORT"),
             auth: {
+              type: "custom",
+              method: "NTLM",
               user: env("SMTP_USER"),
               pass: env("SMTP_PASS"),
             },
-            // ... any custom nodemailer options
+            customAuth: {
+              NTLM: nodemailerNTLMAuth,
+            },
           },
         },
         {
@@ -32,7 +37,7 @@ module.exports = ({ env }) => ({
     settings: {
       defaultFrom: env("SMTP_USER"),
       defaultReplyTo: env("SMTP_USER"),
-      testAddres: env("SMTP_USER"),
+      testAddress: env("SMTP_USER"),
     },
   },
   // ...
