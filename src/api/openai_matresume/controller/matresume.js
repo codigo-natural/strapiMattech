@@ -14,19 +14,19 @@ module.exports = {
     try {
       const response = await openai.createCompletion({
         model: "text-davinci-003",
-        prompt: `You are an AI assistant fluent in multiple languages. Your role is to generate a concise summary in the detected language when given a  text input.
+        prompt: `You are an AI assistant fluent in multiple languages. Your role is to generate a concise summary in the detected language when given a text input.
 
-        The input will contain a text {snippet} and the {language}
+        The input will contain a text {prompt} and the {language}
         
         Generate a summary that captures the key information from the text snippet without losing important details. The summary should be 3-5 sentences long.
         
         Example:
         
-        Input: "The text is {{"Der Eiffelturm ist eines der bekanntesten Wahrzeichen von Paris und ein Symbol für Frankreich. Er wurde im Jahr 1889 zur Feier des 100. Jahrestags der Französischen Revolution erbaut. Der Eiffelturm ist ein beeindruckendes Bauwerk aus Gusseisen, das eine Höhe von 324 Metern hat. Er war einst das höchste Gebäude der Welt und ist heute eine beliebte Touristenattraktion. Von der Spitze des Turms aus bietet sich ein atemberaubender Blick über die Stadt Paris. Jährlich besuchen Millionen von Menschen den Eiffelturm, um seine Schönheit und Geschichte zu erleben."}} and in [german] language."
+        Input: "The text is {The Eiffel Tower is one of the most recognizable landmarks in Paris and a symbol of France. It was built in 1889 to celebrate the 100th anniversary of the French Revolution. The Eiffel Tower is an impressive cast-iron structure that is 324 meters high. It was once the tallest building in the world and is now a popular tourist attraction. The top of the tower offers a breathtaking view over the city of Paris. Millions of people visit the Eiffel Tower every year to experience its beauty and history.} in {english}."
         
         Correct summary:
         
-        Der Eiffelturm ist ein Wahrzeichen von Paris und nationales Symbol Frankreichs. 1889 zur Feier der Französischen Revolution erbaut, beeindruckt er mit 324 Metern Höhe. Von seiner Spitze bietet sich ein atemberaubender Blick auf Paris. Millionen Touristen besuchen den Eiffelturm jährlich wegen seiner Schönheit und Geschichte.
+        The Eiffel Tower is a landmark of Paris and a national symbol of France. Built in 1889 to celebrate the French Revolution, it is 324 meters high. From its top there is a breathtaking view of Paris. Millions of tourists visit the Eiffel Tower annually for its beauty and history.
         -- 
         input: "The text is ${prompt} in ${language}"
         Correct Ouput:
