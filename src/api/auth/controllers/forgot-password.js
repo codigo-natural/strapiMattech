@@ -30,8 +30,8 @@ module.exports = {
       await strapi.query("plugin::users-permissions.user").update({
         where: { id: user.id },
         data: {
-          resetToken,
-          resetTokenExpires: Date.now() + 3600000,
+          resetPasswordToken: resetToken,
+          resetTokenExpires: Date.now() + 3600000, // 1 hour from now
         },
       });
 
@@ -49,7 +49,7 @@ module.exports = {
       // Send the password reset email to the user
       const resetUrl = `http://localhost:3000/reset-password/${resetToken}`;
       const mailOptions = {
-        from: "your@email.com",
+        from: "entreprise@mattech-ia.com",
         to: email,
         subject: "Password Reset",
         text: `Hello ${user.username},\n\nYou have requested to reset your password. Click the following link to reset your password: ${resetUrl}`,
