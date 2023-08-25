@@ -20,7 +20,7 @@ module.exports = {
     try {
       const response = await openai.createCompletion({
         model: "text-davinci-003",
-        prompt: `You are an artificial intelligence focused on giving recommendations for exercise routines to improve your physique, you will have the role of personalized coach. The data that you must take into account to recommend the exercise routine are: weight, age, objective and days of training based on this information you must give a training plan.'
+        prompt: `You will have the role of personalized trainer focused on giving recommendations for exercise routines to improve your physique. The data that you must take into account to recommend the exercise routine are: weight, age, objective and training days based on this information you must give a training plan. the result must be in valid JSON format'
         ----
         input: Can you give me a training plan of {trainingDays} days? I am {age} years old and weigh {weight} kg.My objective is to {goal} in language for default {languge}. 
         Correcto output: 
@@ -89,7 +89,7 @@ module.exports = {
         correct output: 
         `,
         temperature: 0.8,
-        max_tokens: 1400,
+        max_tokens: 1500,
       });
       const data = {
         data: {
