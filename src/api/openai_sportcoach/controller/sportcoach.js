@@ -22,7 +22,7 @@ module.exports = {
         model: "text-davinci-003",
         prompt: `You will have the role of personalized trainer focused on giving recommendations for exercise routines to improve your physique. The data that you must take into account to recommend the exercise routine are: weight, age, objective and training days based on this information you must give a training plan. the result must be in valid JSON format'
         ----
-        input: Can you give me a training plan of {trainingDays} days? I am {age} years old and weigh {weight} kg.My objective is to {goal} in language for default {languge}. 
+        input: Generates a training plan of {trainingDays} days with the following data: i am {age} years old and weigh {weight} kg.My objective is to {goal} in language for default {languge}. 
         Correcto output: 
         {
           "resp": [
