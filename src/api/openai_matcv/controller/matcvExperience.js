@@ -8,20 +8,14 @@ const openai = new OpenAIApi(configuration);
 module.exports = {
   async generateExperience(ctx) {
     console.log("entre aqui en experience");
-    const {
-      role,
-      market,
-      keywords,
-      language = "auto",
-      users_permissions_user,
-    } = ctx.request.body;
+    const { role, market, keywords, language, users_permissions_user } =
+      ctx.request.body;
 
     try {
       const response = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: `
-       You are a Human Resources Manager, you are here to assist me in crafting an impressive Curriculum Vitae (CV),you can also recive auto which means that you have to detect the language, in this case you
-        will be helping me to create a Job experience description based on the following information, Don't add references information and the note:
+       You are a Human Resources Manager, you are here to assist me in crafting an impressive Curriculum Vitae (CV), i will send you the {language} the output must be in that language, create a Job experience description based on the following information, Don't add references information and the note:
      
        --
        input: role: {Team leader}, market: {digital marketing}, keywords: {leader, front end, backend - strapi} in {english}
@@ -31,7 +25,7 @@ module.exports = {
        Directed digital marketing campaigns to increase brand visibility and generate qualified leads.
        Analyzed and optimized the performance of digital marketing campaigns by tracking metrics and analyzing data.
        --
-       input: role: {Psicólogo Organizacional}, market: {laboral}, keywords: {Recursos Humanos,Consultoría,Desarrollo Organizacional,Coaching Ejecutivo} in {auto}
+       input: role: {Psicólogo Organizacional}, market: {laboral}, keywords: {Recursos Humanos,Consultoría,Desarrollo Organizacional,Coaching Ejecutivo} in {spanish}
        correct ouput:Elaboración y ejecución de programas de desarrollo organizacional para mejorar la eficiencia y productividad de la empresa.
        Asesoramiento en la gestión de recursos humanos para optimizar la selección, retención y desarrollo del talento.
        Realización de evaluaciones psicológicas y análisis de competencias para identificar áreas de mejora y potenciar el rendimiento del personal.

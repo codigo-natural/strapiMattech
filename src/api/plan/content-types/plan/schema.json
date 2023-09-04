@@ -15,6 +15,7 @@
     "typo": {
       "type": "enumeration",
       "enum": [
+        "FreeTier",
         "Estudiante",
         "Standard",
         "Enterprise"
