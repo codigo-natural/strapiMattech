@@ -28,29 +28,28 @@ module.exports = {
     try {
       const response = await openai.createCompletion({
         model: "text-davinci-003",
-        prompt: `You are an AI copywriter tasked with generating engaging copy for various social media platforms. Your goal is to create compelling content that resonates with the audience while maintaining consistency in tone and style across platforms. Remember that you can receive the parameter {auto} to automatically detect the language of the provided text. Include at least 3 emojis in each social media post to add flair to your copy.
-        Keep in mind:
-        - For each social media platform, generate different copy, tailored to its unique audience.
-        - When the language parameter is {auto}, detect the language of the product description and generate all copies in that language.
-        Training examples:
+        prompt: `Instruction: Generate creative ad copy without additional spaces at the beginning for different social media platforms and languages.
+
+        Context: Optimized text is required for each social network without extra spaces at the beginning, regardless of language.
+        
+        examples:
+        
+        input: "Give me a copywriting idea for ["instagram", "twitter"] advertising in {english}. {ColSanitas} is a {healthcare-focused} company that take care of {health}"
+        output: "IG:💪Embrace a healthier you with ColSanitas' HealthPlus. From preventive care to specialized treatments, our comprehensive healthcare solutions cater to individuals of all ages. Join our thriving community and prioritize your well-being like never before."
+        
+        input: "Give me a copywriting idea for ["facebook"] advertising in {english}. {XfarmV} is a {retail} company that sells {precision agriculture technologies}"
+        output: "FB:Elevate your farming journey with XfarmV's AgroAdvance. 🚀Experience cutting-edge solutions tailored for the modern farmer🚜, delivering exceptional results and driving agricultural success🌱. #AgroAdvance #FarmingInnovation"
+        
+        input: "Give me a copywriting idea for ["twitter"] advertising in {auto}. {TechCo} is a {technology-focused} company that sells {Software and Applications}"
+        output: "TW:Experience the Future of Technology with {TechCo}'s Advanced Software Solutions💻. Discover a world of possibilities with our diverse range of software applications tailored to meet your needs. 🔒From secure solutions to intuitive interfaces, {TechCo} empowers you to transform the way you work and play. 🔥#TechCo #AdvancedSolutions #Innovation"
+        
+        input: "Give me a copywriting idea for ["telegram"] advertising in {spanish}. {Walmart} is a {retail-focused} company that sells {everything}"
+        incorrect output: " TG: Scopri un mondo di possibilità con le nostre soluzioni software avanzate! "
+        correct output: "TG:¡📢Descubre en Walmart! Únete a nuestro canal de Telegram para las mejores ofertas, promociones y novedades. 🎉 Compra desde casa y encuentra todo lo que necesitas en un solo lugar. ¡No te pierdas nuestras exclusivas ofertas en productos de calidad a precios increíbles! Únete hoy y disfruta de una experiencia única con Walmart. ¡Te esperamos!😉"
+        
+        Remember, do not include extra spaces at the beginning in any language.
         --
-        Training input: "Give me a copywriting idea for ["facebook"] advertising in {english}. {XfarmV} is a {retail} company that sells {precision agriculture technologies}".
-        Correct output: "FB:Elevate your farming journey with XfarmV's AgroAdvance. 🚀Experience cutting-edge solutions tailored for the modern farmer🚜, delivering exceptional results and driving agricultural success🌱. #AgroAdvance #FarmingInnovation".
-        --
-        Training input: "Give me a copywriting idea for ["twitter"] advertising in {auto}. {TechCo} is a {technology-focused} company that sells {Software and Applications}".
-        Correct output: "TW:Experience the Future of Technology with {TechCo}'s Advanced Software Solutions💻. Discover a world of possibilities with our diverse range of software applications tailored to meet your needs. 🔒From secure solutions to intuitive interfaces, {TechCo} empowers you to transform the way you work and play. 🔥#TechCo #AdvancedSolutions #Innovation".
-        --
-        Training input: "Give me a copywriting idea for ["instagram", "twitter"] advertising in {english}. {ColSanitas} is a {healthcare-focused} company that take care of {health}".
-        Correct output: "IG:💪Embrace a healthier you with ColSanitas' HealthPlus. From preventive care to specialized treatments, our comprehensive healthcare solutions cater to individuals of all ages. Join our thriving community and prioritize your well-being like never before.",
-        "TW: Your health matters❤️‍🩹, and at ColSanitas, we make it our mission to provide exceptional care💊. Trust our healthcare-focused company to prioritize your well-being and support you every step of the way. 🌈 #ColSanitas #Healthcare"
-        --
-        Training input: "Give me a copywriting idea for ["telegram"] advertising in {spanish}. {Walmart} is a {retail-focused} company that sells {everything}".
-        Correct output: "TG:¡📢Descubre en Walmart! Únete a nuestro canal de Telegram para las mejores ofertas, promociones y novedades. 🎉 Compra desde casa y encuentra todo lo que necesitas en un solo lugar. ¡No te pierdas nuestras exclusivas ofertas en productos de calidad a precios increíbles! Únete hoy y disfruta de una experiencia única con Walmart. ¡Te esperamos!😉".
-        --
-        Training input: "Give me a copywriting idea for ["whatsApp"] advertising in {english}. {Walmart} is a {retail-focused} company that sells {everything}".
-        Correct output: "WA:🛒✨Upgrade your shopping experience with Walmart's QuickMart. Say goodbye to long queues and endless browsing. With QuickMart, shopping is just a message away.📲 Get personalized recommendations, exclusive deals, and fast deliveries. Join our community of savvy shoppers and enjoy hassle-free convenience".
-        --
-        Training input: "Give me a copywriting idea for ${socialMedia} advertising in ${language}. ${company} is a ${field} company that sells ${productDescription}".
+        input: "Give me a copywriting idea for ${socialMedia} advertising in ${language}. ${company} is a ${field} company that sells ${productDescription}".
         correct output:
         `,
         temperature: 0.6,
@@ -88,6 +87,7 @@ module.exports = {
           Source: "MatDescription",
         },
       };
+      console.log(data.data.payload_out)
       await strapi.db.query("api::request.request").create(data);
 
       ctx.send(data.data.payload_out);
