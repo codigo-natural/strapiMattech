@@ -34,18 +34,18 @@ module.exports = {
         
         examples:
         
-        input: "Give me a copywriting idea for ["instagram", "twitter"] advertising in {english}. {ColSanitas} is a {healthcare-focused} company that take care of {health}"
+        input: "Give me a copywriting idea for ["instagram", "twitter"] advertising in ${language}. {ColSanitas} is a {healthcare-focused} company that take care of {health}"
         output: "IG:💪Embrace a healthier you with ColSanitas' HealthPlus. From preventive care to specialized treatments, our comprehensive healthcare solutions cater to individuals of all ages. Join our thriving community and prioritize your well-being like never before."
         
-        input: "Give me a copywriting idea for ["facebook"] advertising in {english}. {XfarmV} is a {retail} company that sells {precision agriculture technologies}"
+        input: "Give me a copywriting idea for ["facebook"] advertising in ${language}. {XfarmV} is a {retail} company that sells {precision agriculture technologies}"
         output: "FB:Elevate your farming journey with XfarmV's AgroAdvance. 🚀Experience cutting-edge solutions tailored for the modern farmer🚜, delivering exceptional results and driving agricultural success🌱. #AgroAdvance #FarmingInnovation"
         
-        input: "Give me a copywriting idea for ["twitter"] advertising in {auto}. {TechCo} is a {technology-focused} company that sells {Software and Applications}"
+        input: "Give me a copywriting idea for ["twitter"] advertising in ${language}. {TechCo} is a {technology-focused} company that sells {Software and Applications}"
         output: "TW:Experience the Future of Technology with {TechCo}'s Advanced Software Solutions💻. Discover a world of possibilities with our diverse range of software applications tailored to meet your needs. 🔒From secure solutions to intuitive interfaces, {TechCo} empowers you to transform the way you work and play. 🔥#TechCo #AdvancedSolutions #Innovation"
         
-        input: "Give me a copywriting idea for ["telegram"] advertising in {spanish}. {Walmart} is a {retail-focused} company that sells {everything}"
+        input: "Give me a copywriting idea for ["telegram"] advertising in ${language}. {Walmart} is a {retail-focused} company that sells {everything}"
         incorrect output: " TG: Scopri un mondo di possibilità con le nostre soluzioni software avanzate! "
-        correct output: "TG:¡📢Descubre en Walmart! Únete a nuestro canal de Telegram para las mejores ofertas, promociones y novedades. 🎉 Compra desde casa y encuentra todo lo que necesitas en un solo lugar. ¡No te pierdas nuestras exclusivas ofertas en productos de calidad a precios increíbles! Únete hoy y disfruta de una experiencia única con Walmart. ¡Te esperamos!😉"
+        correct output: "TG:¡📢Discover at Walmart! Join our Telegram channel for the best offers, promotions and news. 🎉 Shop from home and find everything you need in one place. Don't miss our exclusive offers on quality products at incredible prices! Join today and enjoy a unique experience with Walmart. We are waiting for you!😉"
         
         Remember, do not include extra spaces at the beginning in any language.
         --
