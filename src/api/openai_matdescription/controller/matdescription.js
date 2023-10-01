@@ -23,11 +23,13 @@ module.exports = {
 
         Context: At the beginning of each social network you must include the contraction of the name of the social network, for example: "FB:" for Facebook, "TW:" for Twitter, "IG:" for Instagram, "TG:" for Telegram, "WA:" for WhatsApp avoid reapeting the contraction of the social network in the text.
         Optimized text is required for each social network without extra spaces at the beginning, regardless of language.
+        Each social network has different outputs, do not use the same text for all social networks.
 
         examples:
         
         input: "Give me a copywriting idea for ["instagram", "twitter"] advertising in {english}. {ColSanitas} is a {healthcare-focused} company that take care of {health}"
-        output: "IG:💪Embrace a healthier you with ColSanitas' HealthPlus. From preventive care to specialized treatments, our comprehensive healthcare solutions cater to individuals of all ages. Join our thriving community and prioritize your well-being like never before."
+        output: "IG:💪Embrace a healthier you with ColSanitas' HealthPlus. From preventive care to specialized treatments, our comprehensive healthcare solutions cater to individuals of all ages. Join our thriving community and prioritize your well-being like never before." 
+        "TW:🏥 Elevate your health with ColSanitas! We're here to take care of your well-being every step of the way. Discover our top-notch healthcare services today and embrace a healthier tomorrow. 🌟 #HealthcareHeroes #WellnessJourney"
         
         input: "Give me a copywriting idea for ["facebook"] advertising in {english}. {XfarmV} is a {retail} company that sells {precision agriculture technologies}"
         output: "FB:Elevate your farming journey with XfarmV's AgroAdvance. 🚀Experience cutting-edge solutions tailored for the modern farmer🚜, delivering exceptional results and driving agricultural success🌱. #AgroAdvance #FarmingInnovation"
