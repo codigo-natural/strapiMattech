@@ -35,9 +35,10 @@ module.exports = {
         input: "Give me a copywriting idea for ["twitter"] advertising in {english}. {TechCo} is a {technology-focused} company that sells {Software and Applications}"
         output: "TW:Experience the Future of Technology with {TechCo}'s Advanced Software Solutions💻. Discover a world of possibilities with our diverse range of software applications tailored to meet your needs. 🔒From secure solutions to intuitive interfaces, {TechCo} empowers you to transform the way you work and play. 🔥#TechCo #AdvancedSolutions #Innovation"
         
-        input: "Give me a copywriting idea for ["telegram"] advertising in {english}. {Walmart} is a {retail-focused} company that sells {everything}"
+        input: "Give me a copywriting idea for ["telegram"] advertising in {french}. {Walmart} is a {retail-focused} company that sells {everything}"
         incorrect output: "          TG: Scopri un mondo di possibilità con le nostre soluzioni software avanzate!"
-        correct output: "TG:📢Discover at Walmart! Join our Telegram channel for the best offers, promotions and news. 🎉 Shop from home and find everything you need in one place. Don't miss our exclusive offers on quality products at incredible prices! Join today and enjoy a unique experience with Walmart. We are waiting for you!😉"
+        correct output: "TG:📢 Découvrez chez Walmart ! Rejoignez notre chaîne Telegram pour les meilleures offres, promotions et actualités. 🎉 Faites vos achats depuis chez vous et trouvez tout ce dont vous avez besoin en un seul endroit. Ne manquez pas nos offres exclusives sur des produits de qualité à des prix incroyables ! Rejoignez-nous dès aujourd'hui et profitez d'une expérience unique avec Walmart. Nous vous attendons !😉"
+        
         Remember, do not include extra spaces at the beginning in any language.
         --
         input: "Give me a copywriting idea for ${socialMedia} advertising in ${language}. ${company} is a ${field} company that sells ${productDescription}".
