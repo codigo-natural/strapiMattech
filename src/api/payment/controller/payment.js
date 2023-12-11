@@ -1,8 +1,6 @@
 const STRIPE_KEY = process.env.STRIPE_KEY;
 
-const stripe = require("stripe")(
-  "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"
-);
+const stripe = require("stripe")(`${STRIPE_KEY}`);
 
 module.exports = {
   createPaymentIntent: async (ctx) => {
