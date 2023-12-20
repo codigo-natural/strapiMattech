@@ -11,9 +11,10 @@ module.exports = {
 
     try {
       const response = await openai.createImage({
+        model: "dall-e-2", //dalle e 3 only support 1 image per request, important to change the reduce of 1 image instead of 2 in the plan
         prompt: prompt,
         n: 2,
-        size: "512x512",
+        size: "1024x1024",
         response_format: "b64_json",
       });
 
