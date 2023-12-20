@@ -5,6 +5,8 @@ const smtpHost = process.env.SMTP_HOST;
 const smtpPort = process.env.SMTP_PORT;
 const smtpUser = process.env.SMTP_USER;
 const smtpPass = process.env.SMTP_PASS;
+
+const mattechURL = process.env.NEXTAUTH_URL;
 module.exports = {
   forgotPassword: async (ctx) => {
     const body = ctx.request.body;
@@ -47,7 +49,7 @@ module.exports = {
       });
       // http://localhost:3000/reset-password/
       // Send the password reset email to the user
-      const resetUrl = `http://localhost:3000/reset-password/${resetToken}`;
+      const resetUrl = `${mattechURL}/reset-password/${resetToken}`;
       const mailOptions = {
         from: "entreprise@mattech-ia.com",
         to: email,

@@ -60,13 +60,22 @@ module.exports = {
   async createUser(ctx) {
     const { email, name, description } = ctx.request.body;
 
-    const customer = await stripe.customers.create({
-      email: email,
-      name: name,
-      description:
-        "My First Test Customer (created for API docs at https://www.stripe.com/docs/api)",
-    });
+    // Validate if the email is already in use by another customer in stripe
 
-    return customer;
+    let existingCustomers = await stripe.customers.list({ email: email });
+
+    if (existingCustomers.data.length) {
+      // don't create customer
+      console.log("Customer already exists");
+      return;
+    } else {
+      const customer = await stripe.customers.create({
+        email: email,
+        name: name,
+        description:
+          "My First Test Customer (created for API docs at https://www.stripe.com/docs/api)",
+      });
+      return customer;
+    }
   },
 };
