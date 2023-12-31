@@ -8,7 +8,6 @@ const openai = new OpenAIApi(configuration);
 module.exports = {
   async generateResponse(ctx) {
     const {
-      prompt,
       weight,
       age,
       goal,
@@ -17,85 +16,85 @@ module.exports = {
       users_permissions_user,
     } = ctx.request.body;
 
+    // console.log("Estos son los datos: ", ctx.request.body);
+
     try {
       const response = await openai.createCompletion({
         model: "text-davinci-003",
-        prompt: `You will have the role of personalized trainer focused on giving recommendations for exercise routines to improve your physique. The data that you must take into account to recommend the exercise routine are: weight, age, objective and training days based on this information you must give a training plan. the result must be in valid JSON format'
+        prompt: `
+        As a personalized fitness trainer, your role is to create customized exercise recommendations to improve individuals' physiques. You need to consider factors like weight, age, fitness objectives, 
+        and training frequency. Your task involves developing detailed training plans tailored to each person's unique profile, and the output should be presented in a valid JSON format for easy integration into different systems. 
+        Your expertise in personalized training strategies will be reflected in the well-structured exercise routine you craft, aligning with the user's specific fitness goals.
         ----
-        input: Generates a training plan of {trainingDays} days with the following data: i am {age} years old and weigh {weight} kg.My objective is to {goal} in language for default {languge}. 
+        input: "Generates a training plan of {2} days with the following data: i am {28} years old, my weigh is {52} kg.My objective is to {muscle building}. The respond language must be in {French}". 
         Correcto output: 
         {
           "resp": [
             {
-              "day": "Day 1. Upper Body Strength Training",
+              "day": "Jour 1. Entraînement de Force pour l'ensemble du Corps",
               "exercises": [
-                {"name": "Warm up", "description": "5-10 minutes of light cardio: jogging in place, jumping jacks"},
-                {"name": "Bench press", "description": "3 sets of 8-10 reps"},
-                {"name": "Bicep curls", "description": "3 sets of 10-12 reps"}
+                {"name": "Deadlifts", "description": "4 séries de 8-10 répétitions"},
+                {"name": "Pompes", "description": "3 séries de 15-20 répétitions"},
+                {"name": "Tirage horizontal", "description": "3 séries de 10-12 répétitions"}
               ]
             },
             {
-              "day": "Day 2. Cardio and Abs",
+              "day": "Jour 2. Cardio et Abdos",
               "exercises": [
-                {"name": "Cardio activity of your choice: running, cycling, swimming", "description": "30-45 minutes at a moderate intensity"},
-                {"name": "Abdominal crunches", "description": "3 sets of 15-20 reps"},
-                {"name": "Mountain climbers", "description": "3 sets of 12-15 reps"}
-              ]
-            },
-            {
-              "day": "Day 3. Lower Body Strength Training",
-              "exercises": [
-                {"name": "Squats", "description": "3 sets of 8-10 reps"},
-                {"name": "Lunges", "description": "3 sets of 8-10 reps (each leg)"},
-                {"name": "Deadlifts", "description": "3 sets of 8-10 reps"}
-              ]
-            },
-            {
-              "day": "Day 4. Core and Calves",
-              "exercises": [
-                {"name": "Calf raises", "description": "3 sets of 12-15 reps"},
-                {"name": "Glute bridges", "description": "3 sets of 10-12 reps"},
-                {"name": "Core exercise of your choice: bicycle crunches, reverse crunches", "description": "3 sets of 15-20 reps"}
-              ]
-            },
-            {
-              "day": "Day 5. Full-Body Circuit Training",
-              "exercises": [
-                {"name": "Warm up", "description": "5-10 minutes of light cardio: jogging, jumping jacks"},
-                {"name": "Circuit", "description": "Perform each exercise back-to-back with little to no rest. Repeat the circuit 3 times."},
-                {"name": "Push-ups", "description": "10-12 reps"}
-              ]
-            },
-            {
-              "day": "Day 6. Lower Body and Core",
-              "exercises": [
-                {"name": "Bodyweight squats", "description": "12-15 reps"},
-                {"name": "Plank", "description": "Hold for 30-60 seconds"},
-                {"name": "Dumbbell shoulder press", "description": "10-12 reps"}
-              ]
-            },
-            {
-              "day": "Day 7. Upper Body and Core",
-              "exercises": [
-                {"name": "Dumbbell rows", "description": "10-12 reps (each arm)"},
-                {"name": "Walking lunges", "description": "12-15 reps (each leg)"},
-                {"name": "Bicycle crunches", "description": "15-20 reps"}
+                {"name": "Activité cardio de votre choix : course à pied, vélo, natation", "description": "30 à 45 minutes à une intensité modérée"},
+                {"name": "Crunch abdominaux", "description": "3 séries de 15 à 20 répétitions"},
+                {"name": "Mountain climbers", "description": "3 séries de 12 à 15 répétitions"}
               ]
             }
           ]
-        }                           
+        }                     
         -----
-        input: "Can you give me a training plan of ${trainingDays} days? I am ${age} years old and weigh ${weight} kg. My objective is to ${goal} in language for default ${language}"
+        input: "Generates a training plan of {3} days with the following data: i am {28} years old, my weigh is {52} kg.My objective is to {crossfit}. The respond language must be in {english}".
+        correct output:
+        {
+          "resp": [
+            {
+              "day": "Day 1. CrossFit WOD (Workout of the Day)",
+              "exercises": [
+                {"name": "Warm-up", "description": "10 minutes of dynamic stretching and mobility exercises"},
+                {"name": "Power Cleans", "description": "5 rounds of 8 reps, increasing weight each round"},
+                {"name": "Box Jumps", "description": "4 sets of 10 jumps"},
+                {"name": "Double-Unders", "description": "3 sets of 50 reps"}
+              ]
+            },
+            {
+              "day": "Day 2. CrossFit Metcon (Metabolic Conditioning)",
+              "exercises": [
+                {"name": "Rowing", "description": "5 rounds of 500 meters, rest 1 minute between rounds"},
+                {"name": "Kettlebell Swings", "description": "4 sets of 15 reps"},
+                {"name": "Burpees", "description": "3 sets of 20 reps"}
+              ]
+            },
+            {
+              "day": "Day 3. CrossFit Endurance",
+              "exercises": [
+                {"name": "Running", "description": "Interval training: 6x400 meters with 1-minute rest between intervals"},
+                {"name": "Thrusters", "description": "5 sets of 12 reps"},
+                {"name": "Toes-to-Bar", "description": "3 sets of 15 reps"}
+              ]
+            }
+          ]
+        }
+        -----
+        input: "Generates a training plan of ${trainingDays} days with the following data: i am ${age} years old, my weigh is ${weight} kg.My objective is to ${goal}. The respond language must be in ${language}".
         correct output: 
         `,
         temperature: 0.8,
         max_tokens: 1500,
       });
+
+      // console.log("Esto devuelvo", response.data.choices[0].text.trim());
+
       const data = {
         data: {
           payload_in: { goal: goal },
-          payload_out: { 
-            resp: response.data.choices[0].text.trim() 
+          payload_out: {
+            resp: response.data.choices[0].text.trim(),
           },
           users_permissions_user: users_permissions_user,
           Source: "MatSport",
@@ -105,7 +104,7 @@ module.exports = {
         .query("api::request.request")
         .create(data);
 
-      ctx.send({ data: response.data.choices[0].text.trim() });
+      ctx.send({ data: JSON.parse(response.data.choices[0].text.trim()) });
     } catch (error) {
       ctx.badRequest({ error: "Error generating training plan" });
     }
